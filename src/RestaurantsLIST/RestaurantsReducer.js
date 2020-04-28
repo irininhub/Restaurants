@@ -1,4 +1,4 @@
-import {apiRest} from "./APIRestaurant";
+import {apiRest} from "./APIRestaurants";
 
 const GET_RESTAURANT_LIST ="restaurants/GET_RESTAURANT_LIST";
 
@@ -26,7 +26,7 @@ const initialState = {
     ]
 };
 
-export const restaurantReducer =(state = initialState, action) => {
+export const restaurantsReducer =(state = initialState, action) => {
     switch (action.type){
         case GET_RESTAURANT_LIST:
             return{
@@ -45,10 +45,9 @@ export const restaurantReducer =(state = initialState, action) => {
 const getRestaurantSuccess = (restaurants) => ({type: GET_RESTAURANT_LIST, restaurants});
 
 export const getRestaurantsList = () => async (dispatch) => {
-    debugger
     let restaurants = await apiRest.getRestaurants();
     dispatch(getRestaurantSuccess(restaurants))
-}
+};
 
 
 

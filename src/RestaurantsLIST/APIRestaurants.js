@@ -10,9 +10,7 @@ export const apiRest = {
 
     getRestaurants() {
         return instance.get(`api/restaurant/`).then((response)=>{
-            debugger
            return response.data
-
             }
         )
     }

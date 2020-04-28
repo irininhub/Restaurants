@@ -1,7 +1,7 @@
 .restaurant {
     display: flex;
     justify-content: space-evenly;
-    background-color: #a6d2f5;
+    background-color: rgba(166, 210, 245, 0.78);
     flex-wrap: wrap;
     margin-top: 20px;
 }
@@ -11,41 +11,83 @@
     width: 400px;
     height: 400px;
     margin: 50px 50px 30px;
+    position: relative;
 }
 
 .rest h2 {
- margin-bottom: 15px;
+    margin-bottom: 15px;
 }
-.sale{
+
+.rest h2:hover {
+    transform: scale(1, 1);
+    transition: .4s;
+}
+
+.sale {
     color: yellow;
 }
-.contacts{
+
+.contacts {
     margin-bottom: 5px;
     font-size: 16px;
 }
-.cont{
+
+.cont {
     text-align: start;
     margin: 0 60px 5px;
     font-size: 14px;
 }
-.label{
+
+.label {
     font-weight: bold;
     color: rgba(15, 15, 15, 0.75);
     font-size: 12px;
 }
-.cookTime{
+
+.cookTime {
     color: wheat;
 }
-.info{
-    max-width: 380px;
-    overflow: hidden;
-    font-size: 12px;
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 14px;
+    /*overflow: hidden;*/
     /*text-overflow: ellipsis;*/
-    height:88px;
-    padding: 5px;
+    visibility: hidden;
+    text-align: center;
+    position: absolute;
+    color: #efe7e8;
+    width: 100%;
+    height: 65%;
+    left: 0;
+
 }
-.logoImg{
+
+.rest:hover .info {
+    top: 30%;
+    visibility: visible;
+    background: rgba(0, 0, 0, 0.83);
+    transition: .4s;
+}
+
+.logoImg {
     margin-top: 10px;
 }
 
+.link {
+    text-decoration: none;
+    width: max-content;
+    background-color: #efe7e8;;
+    color: black;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 8px;
+}
 
+.link:hover{
+    transform: scale(0.9);
+    opacity: 0.6;
+}

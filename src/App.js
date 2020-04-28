@@ -1,26 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import s from './App.module.css';
+import Restaurants from "./RestaurantsLIST/Restaurants";
+import {Link, Route} from "react-router-dom";
+import Auth from "./Auth/Auth";
+import Restaurant from "./Restaurant/Restaurant";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+
+const App = () => {
+
+    return (
+        <div className={s.App}>
+            <div className={s.app_header}>
+                <div className={s.links}>
+                <Link className={s.link} to="auth-page">Login</Link>
+                <Link className={s.link} to="restaurants-list">restaurants list</Link>
+                </div>
+                <h1>Restaurants</h1>
+
+            </div>
+
+            <Route path='/restaurants-list' component={Restaurants}/>
+            <Route path='/auth-page' component={Auth}/>
+            <Route path='/restaurant' component ={Restaurant}/>
+
+
+        </div>
+    );
+};
+
 
 export default App;

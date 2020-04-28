@@ -1,12 +1,12 @@
 import {applyMiddleware, combineReducers, createStore} from "redux";
 import thunk from "redux-thunk"
-import {authReducer} from "./AuthReducer"
-import {restaurantReducer} from "./RestaurantsLIST/RestaurantReducer";
+import {authReducer} from "../Auth/AuthReducer"
+import {restaurantsReducer} from "../RestaurantsLIST/RestaurantsReducer";
 
 
 const rootReducer = combineReducers({
     auth: authReducer,
-    rests: restaurantReducer
+    rests: restaurantsReducer
 });
 
 
