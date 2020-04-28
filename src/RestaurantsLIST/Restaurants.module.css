@@ -1,0 +1,51 @@
+.restaurant {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #a6d2f5;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.rest {
+    background-color: indianred;
+    width: 400px;
+    height: 400px;
+    margin: 50px 50px 30px;
+}
+
+.rest h2 {
+ margin-bottom: 15px;
+}
+.sale{
+    color: yellow;
+}
+.contacts{
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+.cont{
+    text-align: start;
+    margin: 0 60px 5px;
+    font-size: 14px;
+}
+.label{
+    font-weight: bold;
+    color: rgba(15, 15, 15, 0.75);
+    font-size: 12px;
+}
+.cookTime{
+    color: wheat;
+}
+.info{
+    max-width: 380px;
+    overflow: hidden;
+    font-size: 12px;
+    /*text-overflow: ellipsis;*/
+    height:88px;
+    padding: 5px;
+}
+.logoImg{
+    margin-top: 10px;
+}
+
+
